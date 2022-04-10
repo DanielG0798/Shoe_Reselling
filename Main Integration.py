@@ -19,6 +19,11 @@ class negative_error(Exception):
 #I made a function to make it easier to correct wrong
 #user input for a number
 #Every time I need the user to input a number I use integer()
+##Andrew Krupp helped me with the try: except:
+##try:
+##    variable = int(input())
+##except:
+##    print("not a valid integer, please try again")
 def integer(number):
     exit = True
     while not exit != True:
@@ -63,12 +68,7 @@ def menu():
 #e will end the program
     return input("What would you like to do? ")
 #return will allow the user to go into the menu based on their input
-##Andrew Krupp helped me with the try: except: but
-#I haven't implemented it yet
-##try:
-##    variable = int(input())
-##except:
-##    print("not a valid integer, please try again")
+
 
 run = menu()
 #The use of the variable exit to equal true makes a way to break the loop
@@ -81,6 +81,9 @@ while end != off:
 #because it makes it easier for me to track.
         print("Hey {}, these questions add shoes to stock".format(user_name))
         shoe_gender = input("Are the shoes Men, Women, or Unisex? ")
+#This while loop will check if the input is what I need it to be to add it
+#in the inventory as well as put the input in the correct format for my list
+#by using the capitalize() and title() functions
         while shoe_gender not in shoe_gender_stock and shoe_gender not in \
                 ("men","MEN","women","WOMEN","unisex","UNISEX"):
             print("Please only enter one of the shoe genders listed")
