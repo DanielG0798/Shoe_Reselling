@@ -345,7 +345,7 @@ This function allows the user to run the program when calling main
                                                          "size: "))
                 else:
                     if shoe_size_sell in shoe_size_stock:
-                        shoe_size_stock[shoe_size_sell] += 1
+                        shoe_size_stock[shoe_size_sell] -= 1
                         shoe_size_loop = False
             retail_price = integer_correct("What is the retail price? $")
             estimated_resell = integer_correct("What is the estimated "
